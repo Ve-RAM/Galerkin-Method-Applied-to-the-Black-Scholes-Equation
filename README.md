@@ -80,30 +80,11 @@ At-the-money comparison (`S = K = 100`):
 - **Other limitation:** the basis is centered at `x = 0`, so it is less efficient for options far
   in/out-of-the-money (`ln(S/K) ≫ 0`). The matrix exponential costs `O(M³)`.
 
-## Repository structure
-
-> Adapt this section to the actual layout of your code.
-
-```
-.
-├── src/
-│   ├── galerkin_hermite.m      % Galerkin–Hermite solver (expm)
-│   ├── fem_crank_nicolson.m    % FEM + Crank-Nicolson solver
-│   ├── monte_carlo.m           % Monte Carlo with antithetic variates
-│   └── black_scholes_exact.m   % Closed-form reference solution
-├── experiments/
-│   ├── sensitivity_analysis.m  % Sweeps over K, r, σ, T
-│   ├── convergence_M.m         % Error vs. number of polynomials
-│   └── compare_methods.m       % Comparison table
-├── figures/
-├── paper/                      % PDF report
-└── README.md
-```
 
 ## Requirements
 
 - MATLAB (R2019b or later recommended)
-- No additional toolboxes expected beyond core MATLAB (`expm`, `integral`, `normcdf` equivalents may be needed).
+- No additional toolboxes expected beyond core MATLAB.
 
 ## Usage
 
@@ -129,7 +110,7 @@ V = galerkin_hermite(S, K, r, sigma, T, M);
 
 ## License
 
-Add your preferred license (e.g., MIT) here.
+MIT
 
 ## Contact
 
